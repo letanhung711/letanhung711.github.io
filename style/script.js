@@ -120,29 +120,6 @@ class Particle {
   }
 }
 
-// function dropFallingIcons(){
-//   const icons = ['🍭', '🍰', '🎂', '🍦'];
-
-//   const interval = setInterval(() => {
-//     const icon = document.createElement('div');
-//     icon.textContent = icons[Math.floor(Math.random()*icons.length)];
-//     icon.style.position = 'fixed';
-//     icon.style.left = `${Math.random()*100}vw`;
-//     icon.style.bottom = `-5vh`;
-//     icon.style.fontSize = `${Math.random()*2+1.5}rem`;
-//     icon.style.pointerEvents = 'none';
-//     icon.style.userSelect = 'none';
-//     icon.style.zIndex = '9999';
-//     icon.style.opacity = 0.9;
-
-//     const duration = Math.random() * 2 + 3.5; // 2.5 - 4.5s
-//     icon.style.animation = `rise ${duration}s ease-out forwards`;
-//     document.body.appendChild(icon);
-
-//     setTimeout(() => icon.remove(), duration * 1000);
-//   }, 800); // chỉnh tốc độ xuất hiện
-// }
-
 function dropFallingIcons(){
   const imageSources = [
     './images/icons/1.gif',
@@ -161,7 +138,6 @@ function dropFallingIcons(){
     img.style.left = `${Math.random() * 100}vw`;
     img.style.bottom = `-6vh`;
     img.style.width = `${Math.random() * 50 + 50}px`; 
-    //img.style.borderRadius = '15px';
     img.style.pointerEvents = 'none';
     img.style.userSelect = 'none';
     img.style.zIndex = '9999';
