@@ -276,12 +276,6 @@ const audio = document.getElementById('bg-music');
 const volumeBtn = document.getElementById('volume-btn');
 const volumeIcon = document.getElementById('volume-icon');
 
-// Cho phép click bất kỳ đâu để bật nhạc (yêu cầu của trình duyệt)
-window.addEventListener('click', function initMusic(){
-  audio.play().catch(()=>{}); // Bắt lỗi nếu không phát được
-  window.removeEventListener('click', initMusic); // Chỉ chạy 1 lần
-});
-
 // Sự kiện bật/tắt nhạc khi click nút loa
 volumeBtn.addEventListener('click', () => {
   if (audio.paused) {
