@@ -286,9 +286,9 @@ window.addEventListener('click', function initMusic(){
 volumeBtn.addEventListener('click', () => {
   if (audio.paused) {
     audio.play();
-    volumeIcon.src = "volume.png"; // icon loa bật
+    volumeIcon.src = "./images/volume.png"; // icon loa bật
   } else {
     audio.pause();
-    volumeIcon.src = "muted.png"; // icon loa tắt (thay link phù hợp)
+    volumeIcon.src = "./images/muted.png"; // icon loa tắt (thay link phù hợp)
   }
 });
