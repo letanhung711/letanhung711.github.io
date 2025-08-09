@@ -270,3 +270,25 @@ window.addEventListener('load', checkOrientation);
 
 // Kiểm tra khi xoay màn hình
 window.addEventListener('resize', checkOrientation);
+
+//music
+const audio = document.getElementById('bg-music');
+const volumeBtn = document.getElementById('volume-btn');
+const volumeIcon = document.getElementById('volume-icon');
+
+// Cho phép click bất kỳ đâu để bật nhạc (yêu cầu của trình duyệt)
+window.addEventListener('click', function initMusic(){
+  audio.play().catch(()=>{}); // Bắt lỗi nếu không phát được
+  window.removeEventListener('click', initMusic); // Chỉ chạy 1 lần
+});
+
+// Sự kiện bật/tắt nhạc khi click nút loa
+volumeBtn.addEventListener('click', () => {
+  if (audio.paused) {
+    audio.play();
+    volumeIcon.src = "volume.png"; // icon loa bật
+  } else {
+    audio.pause();
+    volumeIcon.src = "muted.png"; // icon loa tắt (thay link phù hợp)
+  }
+});
