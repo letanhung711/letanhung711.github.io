@@ -130,8 +130,7 @@ function dropFallingIcons(){
     './images/icons/6.gif',
     './images/icons/7.gif',
     './images/icons/10.gif',
-    './images/icons/11.gif',
-    './images/icons/12.gif'
+    './images/icons/11.gif'
   ];
 
   iconInterval = setInterval(() => {
